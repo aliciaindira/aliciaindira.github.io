@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <title>product1</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="catalog.html">CATALOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <div class="searchbar">
+          <input type="text" placeholder="search" />
+        </div>
+      </ul>
+    </nav>
+    <main>
+      <section class="product-section">
+        <div class="cake-item">
+          <img src="cake2.webp" width="300px" height="300px" />
+        </div>
+        <div class="cake-desc">
+          <h3>Lychee Rose</h3>
+          <hr />
+          <p>Start From Rp 300.000</p>
+          <div class="cart-border">
+            <div class="a">
+              <div class="b">
+                <div class="price">
+                  <button id="min" class="min">-</button>
+                  <p><span id="jumlahKlik" class="jml">1</span></p>
+                  <button id="plus" class="plus">+</button>
+                </div>
+              </div>
+              <div class="price-text">
+                <strong id="subtotal">Rp 300.000</strong>
+              </div>
+            </div>
+            <button class="buy-now">Buy Now</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      var tombolKurang = document.getElementById("min");
+      var tombolTambah = document.getElementById("plus");
+      var jumlahKlikElement = document.getElementById("jumlahKlik");
+      var subtotalElement = document.getElementById("subtotal");
+      var hargaPerItem = 300000;
+
+      var updateSubtotal = function () {
+        var jumlahKlik = parseInt(jumlahKlikElement.textContent, 10) || 0;
+        var subtotal = jumlahKlik * hargaPerItem;
+        subtotalElement.textContent = "Rp " + subtotal.toLocaleString();
+      };
+
+      tombolKurang.addEventListener("click", function () {
+        if (jumlahKlikElement.textContent > 1) {
+          jumlahKlikElement.textContent--;
+          updateSubtotal();
+        }
+      });
+
+      tombolTambah.addEventListener("click", function () {
+        jumlahKlikElement.textContent++;
+        updateSubtotal();
+      });
+    </script>
+    <footer>
+      <section class="footer-section">
+          <div class="footer1">
+              <h4>Indira's Cake</h4>
+              <br>
+              <p>Jl Semolowaru Selatan 1 No.7, RT.04/RW.02, Kel.Semolowaru
+                Kec. Sukolilo, Surabaya, 60119,
+                Jawa Timur</p>
+          </div>
+          <div class="footer2">
+          <h4>Follow Us! </h4>
+              <div class="content">
+                  <div class="kiri">
+                      <p><img src="ig.png" alt="">IndiraCake</p>
+                      <p><img src="tiktok.png" alt="">CakeByIndira</p>
+                  </div>
+                  <div class="kanan">
+                      <p><img src="x.png" alt="">Indira.Cake</p>
+                      <p><img src="fb.png" alt="">CakeIndira</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="footer2">
+          <h4>Direct Order</h4>
+              <div class="content">
+                  <div class="kiri">
+                      <p> <img src="sopi.png" alt=""> Shopee</p>
+                      <p> <img src="gojek.png" alt=""> Go-Food</p>
+                  </div>
+                  <div class="kanan">
+                      <p><img src="wa.png" alt=""> 08121777676</p>
+                      <p><img src="grab.png" alt=""> Grab-Food</p>
+              </div>
+          </div>
+      </section>
+  </footer>
+  </body>
+</html>

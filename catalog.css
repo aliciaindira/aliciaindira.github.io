@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; 
+    background-color: #EF678F;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border: 1px solid;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+}
+
+input {
+  padding: .5rem 1rem;
+  border: 1px solid black;
+  border-radius: 50px;
+  outline: none;
+  width: 300px;
+  margin: 10 px 0;
+}
+
+main {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.cake-section1 {
+  text-align: center;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.cake-section2 {
+  text-align: center;
+  margin-top:20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.cake-item1,
+.cake-item2,
+.cake-item3,
+.cake-item4 {
+  flex: 1;
+  border: 1px solid rgb(179, 172, 172);
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 10px;
+  max-width: calc(45% - 20px);
+}
+
+.cake-item1 h3, 
+.cake-item2 h3, 
+.cake-item3 h3, 
+.cake-item4 h3 {
+  margin: 10px;
+}
+
+.cake-item1 p,
+.cake-item2 p,
+.cake-item3 p,
+.cake-item4 p {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.cake-item1 a,
+.cake-item2 a,
+.cake-item3 a,
+.cake-item4 a {
+  display: block;
+  margin: 15px;
+  text-align: center;
+  background-color: #f48f36;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
+  text-decoration: none;
+}
+ 
+ footer {
+  background-color: #EF678F;
+}
+
+.footer-section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 20px;
+  color: black;
+}
+
+.footer1,
+.footer2,
+.footer3 {
+  width: 100%; 
+  text-align: center;
+  margin: 0;
+  font-size: 23px;
+}
+
+.footer1 h4,
+.footer2 h4,
+.footer3 h4 {
+  margin-top: 2%;
+  font-weight: bold;
+}
+
+.footer2 .content,
+.footer3 .content {
+  font-size: 20px; 
+  margin: 10px 5%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.footer2 .kiri,
+.footer3 .kiri,
+.footer2 .kanan,
+.footer3 .kanan {
+  text-align: center; 
+}
+
+.footer2 img,
+.footer3 img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+ 
+@media screen and (max-width: 768px) {
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .cake-section1,
+  .cake-section2 {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cake-item1,
+  .cake-item2,
+  .cake-item3,
+  .cake-item4 {
+    max-width: calc(50% - 10px);
+  }
+
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer1,
+  .footer2,
+  .footer3 {
+    width: 100%;
+  }
+
+  .footer2 img,
+  .footer3 img {
+    width: 15px;
+    height: 15px;
+  }
+}

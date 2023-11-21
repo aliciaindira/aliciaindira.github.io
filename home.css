@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+nav ul {
+    background-color: #EF678F;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;    
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+}
+
+input {
+    padding: .5rem 1rem;
+    border: 1px solid black;
+    border-radius: 50px;
+    outline: none;
+    width: 100%;
+    margin-left: 10px 0;
+}
+
+main {
+    justify-content: space-between;
+}
+
+.cake-section1,
+.cake-section2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.cake-section2 {
+    margin: 20px 0 30px;
+}
+ 
+.cake-item {
+    padding: 20px;
+    margin: 20px 5%;
+    border: 1px solid black;
+    text-align: center;
+  }
+   
+.cake-item h3 {
+    margin: 10px;
+  }
+  
+.cake-item p {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.cake-item a {
+    display: block;
+    margin: 15px;
+    text-align: center;
+    background-color: #ED5E81;
+    color: white;
+    padding: 10px;
+    border-radius: 100px;
+    text-decoration: none;
+  }
+
+  footer {
+    background-color: #EF678F;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .footer1,
+  .footer2,
+  .footer3 {
+    width: 100%; 
+    text-align: center;
+    margin: 0;
+    font-size: 23px;
+  }
+  
+  .footer1 h4,
+  .footer2 h4,
+  .footer3 h4 {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  
+  .footer2 .content,
+  .footer3 .content {
+    font-size: 20px; 
+    margin: 10px 5%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .footer2 .kiri,
+  .footer3 .kiri,
+  .footer2 .kanan,
+  .footer3 .kanan {
+    text-align: center; 
+  }
+  
+  .footer2 img,
+  .footer3 img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+
+@media screen and (max-width: 768px) {
+    nav ul li {
+        margin: 0 5px; 
+    }
+
+    nav ul li a {
+        font-size: 14px; 
+    }
+
+    .cake-item {
+        margin: 10px 100%; 
+    }
+
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer1,
+    .footer2,
+    .footer3 {
+        width: 100%; 
+    }
+
+    .footer2 img,
+    .footer3 img {
+      width: 15px; 
+      height: 15px; 
+   }
+}
